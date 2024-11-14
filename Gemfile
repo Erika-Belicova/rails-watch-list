@@ -2,6 +2,18 @@ source "https://rubygems.org"
 
 ruby "3.3.5"
 
+# Front-end
+# bootstrap
+gem "bootstrap", "~> 5.2"
+# auto prefixes for web browsers
+gem "autoprefixer-rails"
+# fonts and icons
+gem "font-awesome-sass", "~> 6.1"
+# generating simple forms
+gem "simple_form"
+# sassc for rails
+gem "sassc-rails"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5"
 
