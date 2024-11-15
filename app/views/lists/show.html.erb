@@ -1,10 +1,16 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h1>My lists</h1>
+<p>Look at all the lists you have added so far.</p>
 
+<! -- treba tu dat vsetky bookmarks zoznamu -->
+
+<% if @list.bookmarks.length > 0%>
+  <% @list.bookmarks.each do |bookmark|%>
+    <%= bookmark.movie.title %>
+    <%= bookmark.comment %>
+    <%= link_to "Delete Film", @bookmark %>
+  <% end %>
+<% end %>
 
 <%= link_to "Add Film", new_list_bookmark_path(@list) %>
-
-
-
 
 <%= link_to "Back", lists_path %>

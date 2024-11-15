@@ -3,7 +3,7 @@
 
 <% @lists.each do |list| %>
   <%= list.name %>
-  <%= link_to "voir cette liste", list_path(list) %>
+  <%= link_to "Open List", list_path(list) %>
 <% end %>
 
-<%= link_to "New list", new_list_path %>
+<%= link_to "New List", new_list_path %>

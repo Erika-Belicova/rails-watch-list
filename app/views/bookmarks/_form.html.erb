@@ -1,5 +1,5 @@
-<%= form_with model: bookmark do |f| %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
+<%= simple_form_for [list, bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
   <%= f.submit %>
 <% end %>
