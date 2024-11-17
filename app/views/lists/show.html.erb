@@ -1,13 +1,13 @@
-<h1>My lists</h1>
-<p>Look at all the lists you have added so far.</p>
+<h1><%= @list.name %></h1>
+<p>Look at all the bookmarks you have added so far to this list.</p>
 
 <! -- treba tu dat vsetky bookmarks zoznamu -->
 
-<% if @list.bookmarks.length > 0%>
-  <% @list.bookmarks.each do |bookmark|%>
+<% if @bookmarks.length > 0%>
+  <% @bookmarks.each do |bookmark|%>
     <%= bookmark.movie.title %>
     <%= bookmark.comment %>
-    <%= link_to "Delete Film", @bookmark %>
+    <%= button_to "Delete Film", list_bookmark_path(@list, bookmark), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 <% end %>
 

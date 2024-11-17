@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "3.3.5"
 
+gem "webpacker"
+
 # Front-end
 # bootstrap
 gem "bootstrap", "~> 5.2"
